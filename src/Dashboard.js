@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Header from './Header';
 import Basicget from './Basicget';
 
@@ -17,18 +18,18 @@ class Dashboard extends Component {
       <div>
             <Header />
             <div className="container">
-              <div className="row">
-                  <div className="col-xs-2">
+            	<div className="row">
+                  <div className="col-xs-12">
                   </div>
-                  <div className="col-xs-8">
-                      <div className="form-wrap">
+            	    <div className="col-xs-12">
+                	    <div className="form-wrap">
                             <h1 className="loginTop">Dashboard</h1>
                            <Basicget />
-                      </div>
-                </div>
+                	    </div>
+            		</div>
                 <div className="col-xs-2">
                 </div>
-              </div>
+            	</div>
           </div>
       </div>
     )

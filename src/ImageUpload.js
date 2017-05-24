@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import user from './user.jpg';
 import {
   Image,
   Button
 } from 'react-bootstrap';
- 
 
 class ImageUpload extends React.Component {
   constructor(props) {
@@ -37,27 +37,29 @@ class ImageUpload extends React.Component {
     let {imagePreviewUrl} = this.state;
     let $imagePreview = null;
     if (imagePreviewUrl) {
-      $imagePreview = (<Image responsive src={imagePreviewUrl} width="200px" height="200px" />);
+      $imagePreview = (<Image responsive thumbnail src={imagePreviewUrl} width="50px" height="50px" />);
     } else {
-      $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+      $imagePreview = (<div><img src={user} height="50px" width="50px"/></div>);
     }
 
     return (
       <div className="previewComponent">
-        <form onSubmit={(e)=>this._handleSubmit(e)}>
+        
           <input className="fileInput" 
             type="file" 
             onChange={(e)=>this._handleImageChange(e)} />
-          <Button className="submitButton" 
-            type="submit" 
-            onClick={(e)=>this._handleSubmit(e)}>Upload Image</Button>
-        </form>
-        <div className="imgPreview">
+             <div className="imgPreview">
           {$imagePreview}
+
         </div>
+           
+          
+       
       </div>
+
     )
   }
 }
   
+
 export default ImageUpload;

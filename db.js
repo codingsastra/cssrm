@@ -20,8 +20,8 @@ exports.User = mongoose.model('User',userSchema,'users');
 
 
 var basicSchema = mongoose.Schema({
- 
-  
+
+
   ReasonofEnquire:String,
   StudentName:String,
   ParentName:String,
@@ -38,7 +38,7 @@ var basicSchema = mongoose.Schema({
   discountfee:Number,
   finalfee:Number,
   Course:String,
-  Photo:String,
+  pictureId: String,
 }
 )
 

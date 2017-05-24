@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   Grid,
   Navbar,
@@ -7,9 +8,8 @@ import {
   Jumbotron,
   Button
 } from 'react-bootstrap';
-
-import AuthService from './AuthService';
 import Img from './Img';
+import AuthService from './AuthService';
 
 class Header extends Component {
   constructor(){
@@ -42,7 +42,7 @@ class Header extends Component {
           <Grid>
             <Navbar.Header>
               <Navbar.Brand>
-                <a href="/">Medical Hall</a>
+                <a href="/">CSSRM</a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -60,7 +60,7 @@ class Header extends Component {
                       :
                       <Nav pullRight>
                         <NavItem href="/dashboard">
-                          Dashboard
+                          Registration
                         </NavItem>
                         <NavItem href="/basic">
                           Basic
@@ -77,4 +77,6 @@ class Header extends Component {
     )
   }
 }
+
+
 export default Header;

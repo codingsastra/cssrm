@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import './Login.css';
 
 class Login extends Component {
   constructor(){
     super();
+
     this.submit = this.submit.bind(this);
   }
 
@@ -19,7 +19,7 @@ class Login extends Component {
     fetch(`/api/users/login`, {
         method: 'POST',
         headers: {
-          'Authorization': 'Basic '+btoa('codingsastra:codingsastra'),
+          'Authorization': 'Basic '+btoa('cssrm:cssrm'),
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: requestBody
@@ -63,17 +63,28 @@ class Login extends Component {
                             <h1 className="loginTop">Log in</h1>
                             <form role="form" onSubmit={this.submit} >
                                 <div className="form-group">
-                                    <label htmlFor="email" className="sr-only">Email</label>
-                                    <input type="email" ref="email" name="email" id="email" className="form-control" placeholder="Email"/>
+                                    <label id="email">Email</label>
+                                    <input type="email"
+                        									ref="email"
+                        									name="email"
+                        									id="email"
+                        									className="form-control"
+                        									placeholder="Email"
+                        									required/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="key" className="sr-only">Password</label>
-                                    <input type="password" ref="password" name="key" id="key" className="form-control" placeholder="Password"/>
+                                    <label id="password">Password</label>
+                                    <input type="password"
+                      									ref="password"
+                      									name="key"
+                      									id="key"
+                                        maxLength={10}
+                                        minLength={4}
+                      									className="form-control"
+                      									placeholder="Password"
+                      									required/>
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="rememberMe" className="sr-only">Remember Me</label>
-                                    <input type="checkbox" name="rememberMe"/>
-                                </div>
+
                                 <input type="submit" id="btn-login" className="btn btn-custom btn-lg btn-block" value="Log in"/>
                             </form>
                             <a href="/Forgot" className="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>

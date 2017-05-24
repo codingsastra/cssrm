@@ -1,5 +1,5 @@
 module.exports = {
-  apiUsername:"codingsastra",
-  apiPassword:"codingsastra",
-  dbUrl:"mongodb://localhost:27017/medicalhall"
+  apiUsername:"cssrm",
+  apiPassword:"cssrm",
+  dbUrl:"mongodb://localhost:27017/cssrm"
 }
