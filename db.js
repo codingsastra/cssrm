@@ -37,7 +37,7 @@ var basicSchema = mongoose.Schema({
   totalfee: Number,
   discountfee:Number,
   finalfee:Number,
-  Course:String,
+  Course:Date,
   pictureId: String,
 }
 )

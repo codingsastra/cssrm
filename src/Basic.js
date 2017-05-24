@@ -192,7 +192,7 @@ var regex = new RegExp("^[0-9]+$");
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="Course" className="sr-only">Course</label>
-                                    <input type="text" onKeyPress={this.onlyNum.bind(this)} maxLength={12} minLength={3} ref="Course" name="Course" id="Course" className="form-control" placeholder="Course Commitment"/>
+                                    <input type="date"  ref="Course" name="Course" id="Course" className="form-control" placeholder="Course Commitment"/>
                                 </div>
                                 <ImageUpload/>
                                <input type="submit" id="btn-login" className="btn btn-custom btn-lg btn-block" value="Submit"/>
