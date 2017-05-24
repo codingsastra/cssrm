@@ -3,6 +3,8 @@ var logger=require('morgan');
 var bodyParser=require('body-parser');
 var errorHandler=require('errorhandler');
 var routes=require('./routes');
+var app=express();
+var port=1337;
 
 
 app.all('/*', routes.auth);

@@ -4,12 +4,9 @@ import Coding from './Coding.png';
 import Header from './Header';
 import ImageUpload from  './ImageUpload';
 
-
-
-
 class Basic extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state = {
       errors: {},
@@ -30,7 +27,7 @@ class Basic extends Component {
         discountfee: '',
         finalfee: '',
         Course: ''
-        
+
       }
     };
 
@@ -39,7 +36,7 @@ class Basic extends Component {
 
 
 onlyAlpha(event,t)
-{ 
+{
 var regex = new RegExp("^[a-zA-Z ]+$");
    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
    if (!regex.test(key)) {
@@ -49,7 +46,7 @@ var regex = new RegExp("^[a-zA-Z ]+$");
 }
 
 onlyNum(event,t)
-{ 
+{
 var regex = new RegExp("^[0-9]+$");
    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
    if (!regex.test(key)) {
@@ -95,7 +92,8 @@ var regex = new RegExp("^[0-9]+$");
           errors: {}
         });
 
-        
+        this.props.history.push('/thankyou');
+
       }.bind(this))
     }.bind(this))
     .catch(function(error){
@@ -110,9 +108,9 @@ var regex = new RegExp("^[0-9]+$");
   render(){
     return (
       <div>
-           
+
             <Header/>
-       
+
             <div className="container">
               <div className="row">
                   <div className="col-xs-2">
@@ -149,7 +147,7 @@ var regex = new RegExp("^[0-9]+$");
 
 
                             <h3 className="loginTop" id="color"><center><font color="white">Contact Information</font></center></h3>
-                                
+
                                 <div className="form-group">
                                     <label htmlFor="Address" className="sr-only">Address</label>
                                     <input type="name"  ref="Address" name="Address" id="Address" className="form-control" placeholder="Address"/>
@@ -176,7 +174,7 @@ var regex = new RegExp("^[0-9]+$");
                                 </div>
 
                   <h3 className="loginTop" id="color"><center><font color="white">Fee Commitment</font></center></h3>
-                                
+
                                 <div className="form-group">
                                     <label htmlFor="totalfee" className="sr-only">totalfee</label>
                                     <input type="number" ref="totalfee" name="totalfee" id="totalfee" className="form-control" placeholder="Total fee"/>
