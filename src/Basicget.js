@@ -1,4 +1,6 @@
+ 
 import React, { Component } from 'react'
+import Basic from './Basic';
 
 
 class Basicget extends Component {
@@ -33,6 +35,7 @@ class Basicget extends Component {
       return "[]";
     });
   };
+
 
   render(){
 
