@@ -49,7 +49,7 @@ class Studentlist extends Component {
 
             <div className="page-header">
               <h3>Students</h3>
-              <button type="button" className="btn btn-success btn-lg"><span className="glyphicon glyphicon-plus"></span> New Registration</button>
+              <button className="btn btn-success btn-lg"><span className="glyphicon glyphicon-plus"></span> New Registration</button>
             </div>
             <table className="table">
               <thead>
