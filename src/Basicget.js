@@ -29,12 +29,16 @@ class Basicget extends Component {
       response.json().then(function(data) {
         this.setState({basic:data,isLoaded:true})
       }.bind(this))
-    }.bind(this))
+      }.bind(this))
+     window.location.assign('http://' + window.location.hostname + ':' + window.location.port + '/basic')
+         
+
     .catch(function(error){
-      console.log("error")
+    console.log("error")
       return "[]";
     });
   };
+ // window.location.assign('http://' + window.location.hostname + ':' + window.location.port + '/basic')
 
 
   render(){
@@ -45,7 +49,7 @@ class Basicget extends Component {
 
             <div className="page-header">
               <h3>Students</h3>
-              <a href="/basic" className="btn btn-success btn-lg"><span className="glyphicon glyphicon-plus"></span> New Registration</a>
+              <button type="button" className="btn btn-success btn-lg"><span className="glyphicon glyphicon-plus"></span> New Registration</button>
             </div>
             <table className="table">
               <thead>

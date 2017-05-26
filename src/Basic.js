@@ -93,8 +93,9 @@ var regex = new RegExp("^[0-9]+$");
           errors: {}
         });
 
+ window.location.assign('http://' + window.location.hostname + ':' + window.location.port + '/dashboard')
 
-        this.props.history.push('/thankyou');
+        //this.props.history.push('/thankyou');
 
 
       }.bind(this))
