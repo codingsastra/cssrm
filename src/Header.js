@@ -63,6 +63,7 @@ class Header extends Component {
                           Registration
                         </NavItem>
                         
+                        
                         <NavItem  eventKey={ 1 } onClick={ this.logout } href='#'>
                           Logout
                         </NavItem>
