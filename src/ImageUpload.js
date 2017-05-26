@@ -39,7 +39,7 @@ class ImageUpload extends React.Component {
     if (imagePreviewUrl) {
       $imagePreview = (<Image responsive thumbnail src={imagePreviewUrl} width="50px" height="50px" />);
     } else {
-      $imagePreview = (<div><img src={user} height="50px" width="50px"/></div>);
+      $imagePreview = (<div><img src={user} height="150px" width="150px"/></div>);
     }
 
     return (

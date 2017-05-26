@@ -123,54 +123,54 @@ var regex = new RegExp("^[0-9]+$");
                             <h3 className="loginTop" id="color"><center><font color="white">Basic Information</font></center></h3>
                             <form role="form" onSubmit={this.submit} id="basic-form">
                                 <div className="form-group">
-                                    <label id="ReasonofEnquire">ReasonofEnquire</label>
+                                    <label id="Reason of Enquire">Reason of Enquire</label>
                                     <input type="name"
                                      onKeyPress={this.onlyAlpha.bind(this)}
-                                      ref="ReasonofEnquire" 
-                                      name="ReasonofEnquire"
-                                       id="ReasonofEnquire" 
+                                      ref="Reason of Enquire" 
+                                      name="Reason of Enquire"
+                                       id="Reason of Enquire" 
                                        className="form-control" 
-                                       placeholder="ReasonofEnquire"/>
+                                       placeholder="Reason of Enquire"/>
                                 </div>
                                 <div className="form-group">
-                                    <label id="StudentName">StudentName</label>
+                                    <label id="Student Name">Student Name</label>
                                     <input type="name" 
                                     onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                     ref="StudentName" 
-                                     name="StudentName" 
-                                     id="StudentName" 
+                                     ref="Student Name" 
+                                     name="Student Name" 
+                                     id="Student Name" 
                                      className="form-control"
-                                      placeholder="StudentName"/>
+                                      placeholder="Student Name"/>
                                 </div>
                                 <div className="form-group">
-                                    <label id="ParentName">ParentName</label>
+                                    <label id="ParentName">Parent Name</label>
                                     <input type="name" 
                                     onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                     ref="ParentName" 
-                                     name="ParentName" 
-                                     id="ParentName"
+                                     ref="Parent Name" 
+                                     name="Parent Name" 
+                                     id="Parent Name"
                                       className="form-control"
-                                       placeholder="ParentName"/>
+                                       placeholder="Parent Name"/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="Parentmobile">Parentmobile</label>
+                                    <label htmlFor="Parent mobile">Parent mobile</label>
                                     <input type="text" 
                                     onKeyPress={this.onlyNum.bind(this)} maxLength={10} minLength={0} 
-                                    ref="Parentmobile" 
-                                    name="Parentmobile" 
-                                    id="Parentmobile" 
+                                    ref="Parent mobile" 
+                                    name="Parent mobile" 
+                                    id="Parent mobile" 
                                     className="form-control"
-                                     placeholder="Parentmobile"/>
+                                     placeholder="Parent mobile"/>
                                 </div>
                                 <div className="form-group">
-                                    <label id="SeekingAdmission">SeekingAdmission</label>
+                                    <label id="Seeking Admission">Seeking Admission</label>
                                     <input type="name"
                                      onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                      ref="SeekingAdmission" 
-                                      name="SeekingAdmission"
-                                       id="SeekingAdmission"
+                                      ref="Seeking Admission" 
+                                      name="Seeking Admission"
+                                       id="Seeking Admission"
                                         className="form-control" 
-                                        placeholder="SeekingAdmission"/>
+                                        placeholder="Seeking Admission"/>
                                 </div>
                                 <div className="form-group">
                                     <label id="Date of birth">Date of birth</label>
@@ -195,14 +195,14 @@ var regex = new RegExp("^[0-9]+$");
                                     placeholder="Address"/>
                                 </div>
                                 <div className="form-group">
-                                    <label id="Mobileno">Mobileno</label>
+                                    <label id="Mobile no">Mobile no</label>
                                     <input type="text" 
                                     onKeyPress={this.onlyNum.bind(this)} maxLength={10} minLength={0} 
-                                    ref="Mobileno"
-                                     name="Mobileno" 
-                                     id="Mobileno" 
+                                    ref="Mobile no"
+                                     name="Mobile no" 
+                                     id="Mobile no" 
                                      className="form-control"
-                                      placeholder="Mobileno"/>
+                                      placeholder="Mobile no"/>
                                 </div>
                                 <div className="form-group">
                                     <label id="Email">Email</label>
@@ -214,14 +214,14 @@ var regex = new RegExp("^[0-9]+$");
                                       placeholder="Email"/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="refferedId">refferedId</label>
+                                    <label htmlFor="reffered Id">reffered Id</label>
                                     <input type="text"
                                      onKeyPress={this.onlyNum.bind(this)} maxLength={8} minLength={1} 
                                      ref="refferedId"
-                                      name="refferedId" 
-                                      id="refferedId"
+                                      name="reffered Id" 
+                                      id="reffered Id"
                                        className="form-control" 
-                                       placeholder="RefferedId"/>
+                                       placeholder="Reffered Id"/>
                                 </div>
                                 <div className="form-group">
                                     <label id="College">College</label>
@@ -247,31 +247,31 @@ var regex = new RegExp("^[0-9]+$");
                   <h3 className="loginTop" id="color"><center><font color="white">Fee Commitment</font></center></h3>
 
                                 <div className="form-group">
-                                    <label id="totalfee">totalfee</label>
+                                    <label id="total fee">total fee</label>
                                        <input type="text" 
-                                        ref="totalfee" 
-                                        name="totalfee"
-                                         id="totalfee" 
+                                        ref="total fee" 
+                                        name="total fee"
+                                         id="total fee" 
                                          className="form-control"
-                                          placeholder="Totalfee"/>
+                                          placeholder="Total fee"/>
                                 </div>
                                 <div className="form-group">
-                                    <label id="discountfee">discountfee</label>
+                                    <label id="discountfee">discount fee</label>
                                     <input type="text" 
-                                     ref="discountfee"
-                                      name="discountfee"
-                                       id="discountfee" 
+                                     ref="discount fee"
+                                      name="discount fee"
+                                       id="discount fee" 
                                        className="form-control"
-                                        placeholder="Discountfee"/>
+                                        placeholder="Discount fee"/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="finalfee">finalfee</label>
+                                    <label htmlFor="final fee">finalfee</label>
                                     <input type="text"  
-                                    ref="finalfee" 
-                                    name="finalfee"
-                                     id="finalfee" 
+                                    ref="final fee" 
+                                    name="final fee"
+                                     id="final fee" 
                                      className="form-control" 
-                                     placeholder="Finalfee"/>
+                                     placeholder="Final fee"/>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="Course">Course</label>

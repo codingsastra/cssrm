@@ -23,7 +23,7 @@ class Dashboard extends Component {
                   </div>
             	    <div className="col-xs-12">
                 	    <div className="form-wrap">
-                            <h1 className="loginTop">Dashboard</h1>
+                            
                            <Studentlist />
                 	    </div>
             		</div>
