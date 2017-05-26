@@ -93,7 +93,6 @@ var regex = new RegExp("^[0-9]+$");
           errors: {}
         });
 
- window.location.assign('http://' + window.location.hostname + ':' + window.location.port + '/dashboard')
 
         this.props.history.push('/thankyou');
 
@@ -124,202 +123,94 @@ var regex = new RegExp("^[0-9]+$");
                             <h3 className="loginTop" id="color"><center><font color="white">Basic Information</font></center></h3>
                             <form role="form" onSubmit={this.submit} id="basic-form">
                                 <div className="form-group">
-                                  <label id="Reason of Enquire">Reason of Enquire</label>
-                                  <input type="name"
-                                     onKeyPress={this.onlyAlpha.bind(this)}
-                                      ref="Reason of Enquire" 
-                                      name="Reason of Enquire"
-                                       id="Reason of Enquire" 
-                                       className="form-control" 
-                                       placeholder="Reason of Enquire"/>
-                                </div>
-                               
-                                <div className="form-group">
-                                    <label id="Student Name">Student Name</label>
-                                    <input type="name" 
-                                    onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                     ref="Student Name" 
-                                     name="Student Name" 
-                                     id="Student Name" 
-                                     className="form-control"
-                                      placeholder="Student Name"/>
-                                    </div>
-                                <div className="form-group">
-                                    <label id="Parent Name">Parent Name</label>
-                                    <input type="name" 
-                                    onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                     ref="Parent Name" 
-                                     name="Parent Name" 
-                                     id="Parent Name"
-                                      className="form-control"
-                                       placeholder="Parent Name"/>
+                                    <label htmlFor="ReasonofEnquire" >Reason of Enquire :</label>
+                                    <input type="name" onKeyPress={this.onlyAlpha.bind(this)} ref="ReasonofEnquire" name="ReasonofEnquire" id="ReasonofEnquire" className="form-control" placeholder="Reason of Enquire" required/>
                                 </div>
                                 <div className="form-group">
-                                   <label id="Parent mobile">Parent Mobile</label>
-                                   <input type="text" 
-                                    onKeyPress={this.onlyNum.bind(this)} maxLength={10} minLength={0} 
-                                    ref="Parent mobile" 
-                                    name="Parent mobile" 
-                                    id="Parent mobile" 
-                                    className="form-control"
-                                      placeholder="Parent mobile"/>
-                                    
+                                    <label htmlFor="StudentName" >Student Name :</label>
+                                    <input type="name" onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3} ref="StudentName" name="StudentName" id="StudentName" className="form-control" placeholder="Student Name" required/>
                                 </div>
-                                
                                 <div className="form-group">
-                                    <label id="Seeking Admission">Seeking Admission</label>
-                                     <input type="name"
-                                     onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                      ref="Seeking Admission" 
-                                      name="Seeking Admission"
-                                       id="Seeking Admission"
-                                        className="form-control" 
-                                        placeholder="Seeking Admission"/>
-                                     </div>
+                                    <label htmlFor="ParentName" >Parent/Guardian Name :</label>
+                                    <input type="name" onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3} ref="ParentName" name="ParentName" id="ParentName" className="form-control" placeholder="Parent/Guardian Name" required/>
+                                </div>
                                 <div className="form-group">
-                                    <label id="Date of birth">Date Of Birth</label>
-                                    <input type="date"
-                                     ref="Date of birth" 
-                                     name="Date of birth"
-                                      id="Date of birth" 
-                                      className="form-control"
-                                       placeholder="Date Of Birth"/>
+                                    <label htmlFor="Parentmobile" >Parent/Guardian Mobile Number:</label>
+                                    <input type="text" onKeyPress={this.onlyNum.bind(this)} maxLength={10} minLength={0} ref="Parentmobile" name="Parentmobile" id="Parentmobile" className="form-control" placeholder="Parent/Guardian Mobile Number" required/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="SeekingAdmission">Seeking Admission :</label>
+                                    <input type="name" onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3} ref="SeekingAdmission" name="SeekingAdmission" id="SeekingAdmission" className="form-control" placeholder="Seeking Admission" required/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="DOB">Date Of Birth :</label>
+                                    <input type="date" ref="DOB" name="DOB" id="DOB" className="form-control" placeholder="Date of Birth" required/>
                                 </div>
 
 
                             <h3 className="loginTop" id="color"><center><font color="white">Contact Information</font></center></h3>
 
                                 <div className="form-group">
-                                    <label id="Address">Address</label>
-                                    <input type="textarea" 
-                                    ref="Address" 
-                                    name="Address" 
-                                    id="Address" 
-                                    className="form-control" 
-                                    placeholder="Address"/>
+                                    <label htmlFor="Address">Address :</label>
+                                    <input type="textarea" ref="Address" name="Address" id="Address" className="form-control" placeholder="Address" required/>
                                 </div>
                                 <div className="form-group">
+                                    <label htmlFor="Mobileno" >Mobile Number:</label>
+                                    <input type="text" onKeyPress={this.onlyNum.bind(this)} maxLength={10} minLength={0} ref="Mobileno" name="Mobileno" id="Mobileno" className="form-control" placeholder="Mobile Number" required/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="Email">Email :</label>
+                                    <input type="email" ref="Email" name="Email" id="Email" className="form-control" placeholder="Email" required/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="refferedId" >Reffered Id(optional) :</label>
+                                    <input type="text" ref="refferedId" name="refferedId" id="refferedId" className="form-control" placeholder="Reffered Id"/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="College" >College,Degree & Year :</label>
+                                    <input type="name" ref="College" name="College" id="College" className="form-control" placeholder="College,Degree & Year" required/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="occuption" >Occupation :</label>
+                                    <input type="name" ref="occuption" name="occuption" id="occuption" className="form-control" placeholder="Occuption" required/>
+                                </div>
 
-                                    <label id="Mobile no">Mobile no</label>
-                                    <input type="text" 
-                                    onKeyPress={this.onlyNum.bind(this)} maxLength={10} minLength={0} 
-                                    ref="Mobile no"
-                                     name="Mobile no" 
-                                     id="Mobile no" 
-                                     className="form-control"
-                                     placeholder="Mobile no"/>
-
-                                     
-                                </div>
-                                <div className="form-group">
-                                    <label id="Email">Email</label>
-                                    <input type="email" 
-                                    ref="Email" 
-                                    name="Email"
-                                     id="Email" 
-                                     className="form-control"
-                                      placeholder="Email"/>
-                                </div>
-                                <div className="form-group">
-                                 <label id="refferedId">Referral Id</label>
-                                 <input type="text"
-                                     onKeyPress={this.onlyNum.bind(this)} maxLength={8} minLength={1} 
-                                     ref="refferedId"
-                                      name="reffered Id" 
-                                      id="reffered Id"
-                                       className="form-control" 
-                                        placeholder="Reffered Id"/>
-                                        </div>
-                                <div className="form-group">
-                                    <label id="College">College</label>
-                                    <input type="name" 
-                                    onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={4} 
-                                    ref="College"
-                                     name="College" 
-                                     id="College"
-                                      className="form-control"
-                                       placeholder="College"/>
-                                </div>      
-                               <div className="form-group">
-                                    <label id="occuption">Occuption</label>
-                                    <input type="name"
-                                     onKeyPress={this.onlyAlpha.bind(this)} maxLength={25} minLength={3}
-                                      ref="Occuption"
-                                       name="occuption"
-                                        id="occuption"
-                                         className="form-control"
-                                          placeholder="Occuption"/>
-                                </div>    
                   <h3 className="loginTop" id="color"><center><font color="white">Fee Commitment</font></center></h3>
 
-                            <div className="form-group">
-                               <label id="totalfee">Total Fee</label>
-                                 <input type="text" 
-                                        ref="total fee" 
-                                        name="total fee"
-                                         id="total fee" 
-                                         className="form-control"
-                                          placeholder="Total fee"/>
-                                </div>
-                                
-                                 <div className="form-group">
-                                    <label id="discountfee">Discount Fee</label>
+                                <div className="form-group">
+                                    <label htmlFor="totalfee" >Total fee :</label>
 
-                                    <input type="text" 
-                                     ref="discount fee"
-                                      name="discount fee"
-                                       id="discount fee" 
-                                       className="form-control"
-                                       placeholder="Discount fee"/>
+                                    <input type="text" ref="totalfee" name="totalfee" id="totalfee" className="form-control" placeholder="Total fee" required/>
                                 </div>
-                                     <div className="form-group">
-                                    <label htmlFor="finalfee">Final Fee</label>
-
-                                    <input type="text"  
-                                    ref="final fee" 
-                                    name="final fee"
-                                     id="final fee" 
-                                     className="form-control" 
-                                      placeholder="Final Fee"/>
-
+                                <div className="form-group">
+                                    <label htmlFor="discountfee">Discount Fee :</label>
+                                    <input type="text" ref="discountfee" name="discountfee" id="discountfee" className="form-control" placeholder="Discount fee" required/>
                                 </div>
-                                 <div className="form-group">
-                                    <label htmlFor="Course">Joining Date</label>
-                                    <input type="date" 
-                                     ref="Course"
-                                      name="Course"
-                                       id="Course"
-                                        className="form-control"
-                                         placeholder="Joining Date"/>
+                                <div className="form-group">
+                                    <label htmlFor="finalfee" >Final Fee :</label>
+                                    <input type="text" ref="finalfee" name="finalfee" id="finalfee" className="form-control" placeholder="Final fee" required/>
                                 </div>
-                                <center>
+                                <div className="form-group">
+                                    <label htmlFor="Course" >Joining Date :</label>
+                                    <input type="date"  ref="Course" name="Course" id="Course" className="form-control" placeholder="Joining Date" required/>
+                                </div>
                                 <ImageUpload/>
-                               <input type="submit" id="btn-login" height="300" className="btn btn-custom btn-lg btn-block" value="Submit"/>
-                               </center>
-                            </form>
-                            </div>
-                </div>         
+                               <input type="submit" id="btn-login" className="btn btn-custom btn-lg btn-block" value="Submit"/>
 
-                  <div className="col-xs-2">
+                            </form>
+
+                      </div>
+                </div>
+
+
+                <div className="col-xs-2">
                 </div>
               </div>
           </div>
       </div>
     )
   }
-}                 
-
- export default Basic;
-                                     
-                                
-                                
-                                
-                               
-                                
-
-                     
+}
 
 
-                
-
-
+export default Basic;

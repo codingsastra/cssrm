@@ -1,9 +1,7 @@
- 
 import React, { Component } from 'react'
-import Basic from './Basic';
 
 
-class Studentlist extends Component {
+class Studentslist extends Component {
 
   constructor(props){
     super(props);
@@ -29,17 +27,12 @@ class Studentlist extends Component {
       response.json().then(function(data) {
         this.setState({basic:data,isLoaded:true})
       }.bind(this))
-      }.bind(this))
-     window.location.assign('http://' + window.location.hostname + ':' + window.location.port + '/basic')
-         
-
+    }.bind(this))
     .catch(function(error){
-    console.log("error")
+      console.log("error")
       return "[]";
     });
   };
- // window.location.assign('http://' + window.location.hostname + ':' + window.location.port + '/basic')
-
 
   render(){
 
@@ -48,14 +41,12 @@ class Studentlist extends Component {
           <div>
 
             <div className="page-header">
-
-              <h3>Students list</h3>
-              <a href="/basic" className="btn btn-success btn-lg"><span className="glyphicon glyphicon-plus"></span> New Registration</a>
-
               
+              <a href="/basic" className="btn btn-success btn-lg"><span className="glyphicon glyphicon-plus"></span> New Registration</a>
             </div>
             <table className="table">
               <thead>
+              <h3>Students List</h3>
                 <tr>
 
 
@@ -112,4 +103,4 @@ const BasicRow=(props) =>
       </tr>
 
 
-export default Studentlist
+export default Studentslist

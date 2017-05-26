@@ -14,15 +14,12 @@ import Login from './Login'
 import Register from './Register'
 import Dashboard from './Dashboard'
 import Basic from './Basic'
+import Thankyou from './Thankyou'
 
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-
-const ThankYou = ()=>{
-  return <h1>Thank You for your submission</h1>;
-}
 
 
 ReactDOM.render(
@@ -33,7 +30,7 @@ ReactDOM.render(
         <Route path="/register" component={Register}/>
         <Route path="/dashboard" component={Dashboard}/>
         <Route path="/basic" component={Basic}/>
-        <Route path="/thankyou" component={ThankYou}/>
+        <Route path="/thankyou" component={Thankyou}/>
 
 
         <Route path="*" component={Whoops404}/>
