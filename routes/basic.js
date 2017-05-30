@@ -93,6 +93,31 @@ router.route('/:basic_id')
         );
       });
 
+router.route('/upload')
+  .post(multer({dest:'./uploads'}).single('photo'),function(req,res){
+      if(req.file) {
+                 //Upload file upload first
+                 gfsService.writeFileToDb({
+             			readStream:fs.createReadStream(req.file.path),
+             			fileName:req.file.originalname,
+             			collection:'photos'
+             		})
+             		.then(function (objectId) {
+                    console.log(objectId)
+                    res.status(200).json({"pictureId":objectId});
+                })
+                .catch(function(error) {
+             			res.status(500).send(error);
+             		})
+                .finally(function () {
+             			fs.unlink(req.file.path);
+             		});
+             }
+             else {
+                 res.status(404).json('File not found');
+             }
+           })
+
 router.route('/picture/:basic_id')
 
       //READ

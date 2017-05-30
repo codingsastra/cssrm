@@ -60,7 +60,7 @@ class Header extends Component {
                       :
                       <Nav pullRight>
                         <NavItem href="/dashboard">
-                          Registration
+                          Dashboard
                         </NavItem>
 
                         <NavItem  eventKey={ 1 } onClick={ this.logout } href='#'>

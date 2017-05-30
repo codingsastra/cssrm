@@ -99,6 +99,8 @@ class Register extends Component {
     const email = encodeURIComponent(this.refs.email.value);
     const password = encodeURIComponent(this.refs.password.value);
 
+    
+
     const requestBody = `name=${name}&email=${email}&password=${password}`;
 
     fetch(`/api/users/register`, {

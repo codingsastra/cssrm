@@ -23,13 +23,9 @@ app.all('/*', function(req, res, next) {
 
 app.all('/*', routes.auth);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json({limit: '500mb'}));
+app.use(bodyParser.urlencoded({extended:true,limit: '500mb'}));
 app.use(express.static('build'));
-
-
-
-
 
 app.use('/api/users',routes.user);
 app.use('/api/basic',routes.basic);
